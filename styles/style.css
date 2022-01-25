@@ -52,6 +52,15 @@ section {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
+.shell img {
+    width: 200px;
+    height: 200px;
+}
+.shells {
+    background-color:brown;
+    display: flex;
+    flex-direction: row;
+}
 
 header {
     display: flex;
