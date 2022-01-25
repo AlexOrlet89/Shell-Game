@@ -21,24 +21,24 @@ button1.addEventListener('click', () => {
 // console.log('clicked');
 //reset reveal class in order to add reveal later.
 
-// ball3.classList.remove('reveal');
-// ball1.classList.remove('reveal');
-// ball2.classList.remove('reveal');
+    ball3.classList.remove('reveal');
+    ball1.classList.remove('reveal');
+    ball2.classList.remove('reveal');
 
     total++;
+    
     const ballLocation = Math.ceil(Math.random() * 3);
-
-// console.log('ball is in location', ballLocation);
-
+    // console.log('ball is in location', ballLocation);
+    
     if (ballLocation === 1) {
-        ball1.classList.add('reveal');
         wins++;
+        ball1.classList.add('reveal');
     } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
     } else {
         ball3.classList.add('reveal');
     }
-
+    
     winSpan.textContent = wins;
     totalSpan.textContent = total;
     lossSpan.textContent = total - wins;
@@ -47,10 +47,56 @@ button1.addEventListener('click', () => {
 
 button2.addEventListener('click', () => {
     console.log('clicked');
+
+    ball3.classList.remove('reveal');
+    ball1.classList.remove('reveal');
+    ball2.classList.remove('reveal');
+
+    total++;
+    
+    const ballLocation = Math.ceil(Math.random() * 3);
+    // console.log('ball is in location', ballLocation);
+    
+    if (ballLocation === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballLocation === 2) {
+        wins++;
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
+    }
+    
+    winSpan.textContent = wins;
+    totalSpan.textContent = total;
+    lossSpan.textContent = total - wins;
+
 });
 
 button3.addEventListener('click', () => {
     console.log('clicked');
+
+    ball3.classList.remove('reveal');
+    ball1.classList.remove('reveal');
+    ball2.classList.remove('reveal');
+
+    total++;
+    
+    const ballLocation = Math.ceil(Math.random() * 3);
+    // console.log('ball is in location', ballLocation);
+    
+    if (ballLocation === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballLocation === 2) {
+        ball2.classList.add('reveal');
+    } else {
+        wins++;
+        ball3.classList.add('reveal');
+    }
+    
+    winSpan.textContent = wins;
+    totalSpan.textContent = total;
+    lossSpan.textContent = total - wins;
+
 });
 
   // get user input

@@ -1,3 +1,6 @@
+* {
+    border: black 2px solid;
+}
 
 body {
     /* feel free to update these css variables for a quick theme */
@@ -65,6 +68,15 @@ section {
     flex-direction: row;
     border: black 20px solid;
     align-items: center;
+}
+
+.ball.reveal {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.6);
 }
 
 header {
