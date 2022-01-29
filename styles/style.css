@@ -68,11 +68,21 @@ section {
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; NOPE! */
+    justify-content: flex-end;
     /* justify-items: center; NOPE! */
-
+    
 }
 
+.ball.reveal {
+    height: 40px;
+    width: 40px;
+    margin: 100px;
+    /* padding: 20px; */
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
 .shells {
     background-color:rgb(145, 93, 93);
     display: flex;
@@ -81,17 +91,11 @@ section {
     align-items: center;
 }
 
-.ball.reveal {
-    height: 40px;
-    width: 40px;
-    margin: 10px;
-    background-color: red;
-    border-radius: 50%;
-    box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.6);
-}
 
 .shell button {
-    /* border: black 2px solid; */
+    border: black 2px solid;
+    /* position: absolute; */
+    /* align-items: center; */
 }
 
 .shell img {

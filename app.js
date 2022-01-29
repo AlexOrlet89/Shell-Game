@@ -20,85 +20,55 @@ let total = 0;
 button1.addEventListener('click', () => {
 // console.log('clicked');
 //reset reveal class in order to add reveal later.
-
-    ball3.classList.remove('reveal');
-    ball1.classList.remove('reveal');
-    ball2.classList.remove('reveal');
-
-    total++;
+    reset();
+    handleGuess(1);
+    displayResults();
     
-    const ballLocation = Math.ceil(Math.random() * 3);
-    // console.log('ball is in location', ballLocation);
-    
-    if (ballLocation === 1) {
-        wins++;
-        ball1.classList.add('reveal');
-    } else if (ballLocation === 2) {
-        ball2.classList.add('reveal');
-    } else {
-        ball3.classList.add('reveal');
-    }
-    
-    winSpan.textContent = wins;
-    totalSpan.textContent = total;
-    lossSpan.textContent = total - wins;
-
 });
+
 
 button2.addEventListener('click', () => {
-    console.log('clicked');
-
-    ball3.classList.remove('reveal');
-    ball1.classList.remove('reveal');
-    ball2.classList.remove('reveal');
-
-    total++;
+    reset();
+    handleGuess(2);
+    displayResults();
     
-    const ballLocation = Math.ceil(Math.random() * 3);
-    // console.log('ball is in location', ballLocation);
-    
-    if (ballLocation === 1) {
-        ball1.classList.add('reveal');
-    } else if (ballLocation === 2) {
-        wins++;
-        ball2.classList.add('reveal');
-    } else {
-        ball3.classList.add('reveal');
-    }
-    
-    winSpan.textContent = wins;
-    totalSpan.textContent = total;
-    lossSpan.textContent = total - wins;
-
 });
+
 
 button3.addEventListener('click', () => {
-    console.log('clicked');
-
-    ball3.classList.remove('reveal');
-    ball1.classList.remove('reveal');
-    ball2.classList.remove('reveal');
-
-    total++;
+    reset();
+    handleGuess(3);
+    displayResults();
     
+});
+
+// get user input
+// use user input to update state 
+// update DOM to reflect the new state
+
+function handleGuess(value) {
+    total ++;
     const ballLocation = Math.ceil(Math.random() * 3);
-    // console.log('ball is in location', ballLocation);
-    
+    if (ballLocation === value) {
+        wins++;
+    }
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
     } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
     } else {
-        wins++;
         ball3.classList.add('reveal');
     }
-    
+}
+
+function displayResults() {
     winSpan.textContent = wins;
     totalSpan.textContent = total;
     lossSpan.textContent = total - wins;
+}
 
-});
-
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+function reset() {
+    ball3.classList.remove('reveal');
+    ball1.classList.remove('reveal');
+    ball2.classList.remove('reveal');
+}
